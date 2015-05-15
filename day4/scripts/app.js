@@ -10,9 +10,13 @@ var hrApp = angular.module('hrApp', ['ngRoute']);
 hrApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider
-            .when('/colors', {
+                .when('/colors', {
                 templateUrl: 'views/demo/colors.html',
                 controller: 'Colors'
+                })
+                .when('/employeeedit/:employeeid', {
+                templateUrl: 'views/employeeedit.html',
+                    controller: 'EmployeeEditController'
                 })
                 .when('/employeeadd', {
                     templateUrl: 'views/employeeadd.html',

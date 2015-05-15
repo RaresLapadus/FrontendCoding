@@ -69,9 +69,12 @@
                     <!--TODO#HR3-->
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.jobId.$invalid}">
                     <div class="form-group">
-                        <label for="manager">Job ID:</label>
+                        <label for="jobId">Job ID:</label>
                         <!--TODO#HR2-->
-                        <input type="text" ng-model=" employee.jobId" class="form-control" required>
+                        <select id="jobId" ng-model="employee.jobId" name="job" class="form-control" required
+                                ng-options="job.jobTitle for job in jobs track by job.jobTitle">
+                        </select>
+                        <!--<input type="text" ng-model=" employee.jobId" class="form-control" required>-->
                     </div>
                     </div>
                 </div>
@@ -105,17 +108,20 @@
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.departmentId.$invalid}">
                     <!--TODO#HR3-->
                     <div class="form-group">
-                        <label for="manager">Department ID:</label>
+                        <label for="departmentId">Department ID:</label>
                         <!--TODO#HR2-->
-                        <input type="text" ng-model="employee.departmentId" class="form-control" required>
+                        <select id="departmentId" ng-model="employee.departmentId" name="department" class="form-control" required
+                                ng-options="department.departmentName for department in departments track by department.departmentId">
+                        </select>
+                        <!--<input type="text" ng-model="employee.departmentId" class="form-control" required>-->
                     </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group" ng-class="{ 'has-error': employeeAddForm.manager.$invalid }">
                         <label for="manager">Manager:</label>
-                        <select id="manager" ng-model="employee.managerId" name="manager" class="form-control" required
-                                ng-options="manager.firstName+' '+ manager.lastName for manager in managers track by manager.employeeId">
+                        <select id="manager" ng-model="employee.managerId" name="managerId" class="form-control" required
+                                ng-options="manager.firsName+ ' ' +manager.lastName  for manager in managers track by manager.employeeId">
                         </select>
                     </div>
                 </div>

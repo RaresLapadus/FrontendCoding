@@ -28,7 +28,7 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http', '$location', 'comm
 
                 $scope.managers = data;
             });
-    /**
+    /**b
      * Persist an employee
      * @param addEmployee - employee to be persisted
      */

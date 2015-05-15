@@ -25,6 +25,10 @@ hrApp.controller('EmployeeEditController', ['$scope', '$http', '$routeParams', '
             });
     }
 
+
+
+
+
     $scope.datePattern = /^\d{4}-\d{2}-\d{2}$/;
     $scope.commissionPattern =  /^[0]\.\d{1}(\d)?$/;
 
