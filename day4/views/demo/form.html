@@ -1,0 +1,23 @@
+<div class="container">
+
+    <!--TODO #5 create the ng-form element-->
+
+
+    <ng-form name="formTest" ng-controller="Form">
+     <input name="input" ng-model="ng-model" required>
+    <span class="error" ng-show="formTest.input.$error.required">Required!</span><br>
+
+         Input: {{input}}<br>
+
+    formTest.$pristine = {{formTest.$pristine}}<br>
+    formTest.#dirty = {{formTest.$dirty}}<br>
+    formTest.input.$valid = {{formTest.input.$valid}}<br>
+    formTest.input.$invalid = {{formTest.input.$invalid}}<br>
+    formTest.input.$error = {{formTest.input.$error}}<br>
+    formTest.$valid = {{formTest.$valid}}<br>
+    formTest.$error.required = {{!!formTest.$error.required}}<br>
+
+
+    </ng-form>
+
+</div>

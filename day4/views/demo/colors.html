@@ -1,0 +1,24 @@
+<div class="container">
+
+
+    <div class="panel-body">
+        <!--TODO #1 create the select element-->
+        <select ng-model="color" ng-options="color.text for color in colors track by color.text" ng-change="changeColor()">
+            </select>
+
+        <input ng-model ="searchText" ><br>
+        <input ng-model ="orderByText" ><br>
+        <span ng-class="myVar">"Some text"</span>
+        <!--TODO #4-->
+    </div>
+
+    <div ng-repeat="color in colors | filter: searchText | orderBy: orderByText ">
+        {{color.text}}
+        {{color.class}}
+    </div>
+
+    <p>---------------------------</p>
+
+    <!--TODO#8-->
+
+</div>
